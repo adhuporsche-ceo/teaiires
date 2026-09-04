@@ -61,5 +61,3 @@ View and manage your app in **AI Studio**: https://ai.studio/apps/dee22918-0868-
 - [Node.js Documentation](https://nodejs.org/docs)
 
 ---
-
-**Made with ❤️ using Google Gemini API**
