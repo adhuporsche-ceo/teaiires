@@ -1,63 +1,99 @@
-# 🚀 AI Studio App
+ # Teacher's Day Gift & Interactive Keepsake
 
-A modern AI-powered application built with Google's Gemini API, ready to run locally and deploy to production.
+An interactive digital Teacher's Day gift built with React and Vite. The experience starts as a wrapped gift and unfolds into a series of personalized keepsakes: a golden apple, a handwritten letter, an animated thank-you celebration, and a gratitude garden.
 
----
+## Experience
 
-## 📋 Prerequisites
+- A DISTROBYTEZ-inspired boot screen introduces the keepsake.
+- Unwrap the animated gift box to enter the keepsake collection.
+- Explore the golden apple, handwritten letter, thank-you animation, and gratitude garden.
+- Personalize the teacher, sender, subject, and school details from the settings control.
+- Play the music-box melody or mute sound effects independently.
+- Rewrap the gift and replay the boot screen at any time.
+- Enjoy a responsive layout designed for desktop and mobile screens.
 
-- **Node.js** (v16 or higher)
-- **npm** (included with Node.js)
-- **Gemini API Key** (get one at [ai.google.dev](https://ai.google.dev))
+## Tech Stack
 
----
+- React 19 with TypeScript
+- Vite 6
+- Tailwind CSS 4
+- Motion for React animations
+- Lucide React icons
+- HTML audio and browser APIs for the sound experience
 
-## 🔧 Installation
+## Requirements
 
-### 1. Install Dependencies
+- Node.js 18 or newer
+- npm
+
+## Getting Started
+
 ```bash
 npm install
-```
-
-### 2. Configure Environment Variables
-Create or update the `.env.local` file with your Gemini API key:
-```env
-GEMINI_API_KEY=your_api_key_here
-```
-
-### 3. Run Locally
-```bash
 npm run dev
 ```
 
-The app will start and be accessible at `http://localhost:3000` (or the configured port).
+Open the local URL shown by Vite, usually `http://localhost:3000`.
 
----
+No API key or external service is required for the current experience.
 
-## 🎯 Access Your App
+## Available Scripts
 
-View and manage your app in **AI Studio**: https://ai.studio/apps/dee22918-0868-456a-b94a-6f2c5d453edf
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server on port 3000. |
+| `npm run build` | Create a production build in `dist/`. |
+| `npm run preview` | Preview the production build locally. |
+| `npm run lint` | Run the TypeScript compiler without emitting files. |
+| `npm run clean` | Remove generated build and server files. |
 
----
+Before sharing a change, run:
 
-## 📦 Available Scripts
+```bash
+npm run lint
+npm run build
+```
 
-- `npm run dev` – Start the development server
-- `npm run build` – Build for production
-- `npm start` – Run the production build
+## Project Structure
 
----
+```text
+src/
+├── App.tsx                         # Main experience and keepsake navigation
+├── index.css                       # Global styles and design tokens
+├── types.ts                        # Shared TypeScript types
+├── components/
+│   ├── AnimatedThanks.tsx           # Thank-you celebration
+│   ├── AppleKeepsake.tsx            # Golden apple keepsake
+│   ├── DistroBytezBootScreen.tsx   # Intro boot animation
+│   ├── GiftBoxIntro.tsx             # Wrapped gift and unwrap flow
+│   ├── GratitudeGarden.tsx          # Gratitude garden
+│   ├── HandwrittenLetter.tsx        # Personalized letter
+│   ├── PastelBackgroundShapes.tsx   # Decorative background shapes
+│   └── PersonalizeModal.tsx         # Recipient and sender settings
+├── assets/images/                  # Image assets used by the experience
+└── utils/
+    ├── audio.ts                     # Music and sound controls
+    └── confetti.ts                  # Celebration effects
+```
 
-## 📝 Notes
+## Personalization
 
-- Keep your `GEMINI_API_KEY` secure and never commit it to version control
-- The `.env.local` file is excluded from git by default
+Use the **Personalize** control in the top-right app bar to update the recipient and sender details. The defaults are defined in the `profile` state in [src/App.tsx](src/App.tsx). The modal and individual keepsakes consume that shared profile so the changes remain consistent throughout the experience.
 
----
+## Production Build
 
-## 📖 Learn More
+Build the app with:
 
-- [Google AI Studio Documentation](https://ai.google.dev)
-- [Node.js Documentation](https://nodejs.org/docs)
+```bash
+npm run build
+```
 
----
+The generated `dist/` directory is static and can be deployed to any static hosting provider that supports single-page applications. For a local production preview:
+
+```bash
+npm run preview
+```
+
+## License
+
+This project does not currently declare a license. Add one before distributing it publicly.
