@@ -1,0 +1,6 @@
+{
+  "name": "Teacher's Day Gift & Interactive Keepsake",
+  "description": "An interactive digital gift experience for Teacher's Day featuring an unwrappable 3D gift box, cracking golden apple with speech narration, handwritten parchment letter with wax seal, animated heartfelt thanks celebration, and customizable gratitude keepsakes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
